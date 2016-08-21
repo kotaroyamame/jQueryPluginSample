@@ -70,11 +70,123 @@
 
       }else if(setting.transition==="top"){
 
+        var imageLength = sliderWrapEl.find(".sampleSlider__image").length;
+        sliderWrapEl.find(".sampleSlider__image").css({top:"-100%"});
+        sliderWrapEl.find(".sampleSlider__image").removeClass('current');
+
+        function imageChange(){
+
+          sliderWrapEl.find(".sampleSlider__image").removeClass('current');
+      
+          sliderWrapEl.find(".sampleSlider__image").eq(i).addClass('current').animate({top:"0%"},setting.transitionTime,function(){
+            sliderWrapEl.find(".sampleSlider__image").not('.current').css({top:"-100%"});
+            
+          });
+          sliderWrapEl.find(".sampleSlider__image").eq(i==0?imageLength-1:i-1).addClass('current').animate({top:"100%"},setting.transitionTime);
+
+          i++;
+
+          if(imageSrcs.length < i+1){
+            i=0;
+          }
+
+        }
+
+        var i=0;
+
+        imageChange();
+   
+        setInterval(imageChange,setting.changeTime * 1000);//ミリ秒に変更
+
       }else if(setting.transition==="right"){
+
+        var imageLength = sliderWrapEl.find(".sampleSlider__image").length;
+        sliderWrapEl.find(".sampleSlider__image").css({right:"-100%"});
+        sliderWrapEl.find(".sampleSlider__image").removeClass('current');
+
+        function imageChange(){
+
+          sliderWrapEl.find(".sampleSlider__image").removeClass('current');
+      
+          sliderWrapEl.find(".sampleSlider__image").eq(i).addClass('current').animate({right:"0%"},setting.transitionTime,function(){
+            sliderWrapEl.find(".sampleSlider__image").not('.current').css({right:"-100%"});
+            
+          });
+          sliderWrapEl.find(".sampleSlider__image").eq(i==0?imageLength-1:i-1).addClass('current').animate({right:"100%"},setting.transitionTime);
+
+          i++;
+
+          if(imageSrcs.length < i+1){
+            i=0;
+          }
+
+        }
+
+        var i=0;
+
+        imageChange();
+   
+        setInterval(imageChange,setting.changeTime * 1000);//ミリ秒に変更
 
       }else if(setting.transition==="bottom"){
 
+        var imageLength = sliderWrapEl.find(".sampleSlider__image").length;
+        sliderWrapEl.find(".sampleSlider__image").css({bottom:"-100%"});
+        sliderWrapEl.find(".sampleSlider__image").removeClass('current');
+
+        function imageChange(){
+
+          sliderWrapEl.find(".sampleSlider__image").removeClass('current');
+      
+          sliderWrapEl.find(".sampleSlider__image").eq(i).addClass('current').animate({bottom:"0%"},setting.transitionTime,function(){
+            sliderWrapEl.find(".sampleSlider__image").not('.current').css({bottom:"-100%"});
+            
+          });
+          sliderWrapEl.find(".sampleSlider__image").eq(i==0?imageLength-1:i-1).addClass('current').animate({bottom:"100%"},setting.transitionTime);
+
+          i++;
+
+          if(imageSrcs.length < i+1){
+            i=0;
+          }
+
+        }
+
+        var i=0;
+
+        imageChange();
+   
+        setInterval(imageChange,setting.changeTime * 1000);//ミリ秒に変更
+
       }else if(setting.transition==="left"){
+
+        var imageLength = sliderWrapEl.find(".sampleSlider__image").length;
+        sliderWrapEl.find(".sampleSlider__image").css({left:"-100%"});
+        sliderWrapEl.find(".sampleSlider__image").removeClass('current');
+
+        function imageChange(){
+
+          sliderWrapEl.find(".sampleSlider__image").removeClass('current');
+      
+          sliderWrapEl.find(".sampleSlider__image").eq(i).addClass('current').animate({left:"0%"},setting.transitionTime,function(){
+            sliderWrapEl.find(".sampleSlider__image").not('.current').css({left:"-100%"});
+            
+          });
+          sliderWrapEl.find(".sampleSlider__image").eq(i==0?imageLength-1:i-1).addClass('current').animate({left:"100%"},setting.transitionTime);
+
+          i++;
+
+          if(imageSrcs.length < i+1){
+            i=0;
+          }
+
+        }
+
+        var i=0;
+
+        imageChange();
+   
+        setInterval(imageChange,setting.changeTime * 1000);//ミリ秒に変更
 
       }
       }

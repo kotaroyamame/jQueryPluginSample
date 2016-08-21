@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-          .hoge{
+          .hoge,.hoge2,.hoge3,.hoge4,.hoge5{
             width:300px;
             height:200px;
           }
@@ -19,16 +19,49 @@
         <script>
           //プラグインの設定
           $(function(){
-            $(".hoge").sampleSlider({
-              changeTime:5,
-              transition:"fade",
-              transitionTime:500
+            $(".hoge").sampleSlider();
+            $(".hoge2").sampleSlider({
+              transition:"top"
+            });
+            $(".hoge3").sampleSlider({
+              transition:"right"
+            });
+            $(".hoge4").sampleSlider({
+              transition:"bottom"
+            });
+            $(".hoge5").sampleSlider({
+              transition:"left"
             });
           });
         </script>
     </head>
     <body>
+      <h1>デフォルト</h1>
       <div class="hoge">
+        <img src="img/01.jpg" style="opacity:0;">
+        <img src="img/02.jpg" style="opacity:0;">
+        <img src="img/03.jpg" style="opacity:0;">
+      </div>
+      <h1>オプション(transition:top)</h1>
+      <div class="hoge2">
+        <img src="img/01.jpg" style="opacity:0;">
+        <img src="img/02.jpg" style="opacity:0;">
+        <img src="img/03.jpg" style="opacity:0;">
+      </div>
+      <h1>オプション(transition:right)</h1>
+      <div class="hoge3">
+        <img src="img/01.jpg" style="opacity:0;">
+        <img src="img/02.jpg" style="opacity:0;">
+        <img src="img/03.jpg" style="opacity:0;">
+      </div>
+      <h1>オプション(transition:bottom)</h1>
+      <div class="hoge4">
+        <img src="img/01.jpg" style="opacity:0;">
+        <img src="img/02.jpg" style="opacity:0;">
+        <img src="img/03.jpg" style="opacity:0;">
+      </div>
+      <h1>オプション(transition:left)</h1>
+      <div class="hoge5">
         <img src="img/01.jpg" style="opacity:0;">
         <img src="img/02.jpg" style="opacity:0;">
         <img src="img/03.jpg" style="opacity:0;">
